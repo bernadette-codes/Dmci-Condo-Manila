@@ -1,0 +1,915 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import "variables";
+@import "mixins";
+
+body {
+  position: relative;
+  background-color: #eff2f7;
+  color: #191919;
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+}
+
+/** Landing Page Slides backgrounds **/
+#first-slider .slide1,
+#first-slider .slide2 {
+  background: left top / cover no-repeat;
+}
+
+#first-slider .slide1 {
+  @include respond-to(992px) {
+    background-position: ($sliderPos + 30) top;
+  }
+  @include respond-to(550px) {
+    background-position: ($sliderPos + 35) top;
+  }
+}
+
+#first-slider .slide2 {
+  @include respond-to(450px) {
+    background-position: $sliderPos top;
+  }
+}
+
+/** Landing Page **/
+#first-slider {
+  font: {
+    family: 'Quicksand', sans-serif;
+    weight: 700;
+  }
+
+  h1 {
+    @include seoKeyword;
+  }
+
+  p {
+    font: {
+      size: $sliderPsize;
+      weight: 600;
+    }
+    color: $white;
+    text-shadow: 3px 3px 5px $deepBlue;
+    @include respond-to(668px) {
+      font-size: $sliderPsize - 10;
+    }
+    @include respond-to(550px) {
+      text-align: center;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }//p
+
+  p.last {
+    font-size: $sliderPsize + 20;
+    @include respond-to(668px) {
+      font-size: $sliderPsize + 5;
+    }
+    @include respond-to(550px) {
+      font-size: $sliderPsize;
+    }
+    @include respond-to(500px) {
+      font-size: $sliderPsize - 5;
+    }
+  } //p.last
+} //#first-slider
+
+.carousel-inner .item .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0.4;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+/** Scrollspy **/
+nav.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/** Nav Bar **/
+.affix ~ .container-fluid {
+  position: relative;
+  top: 50px;
+}
+
+.navbar.navbar-main {
+  background-color: $deepBlue;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  z-index: 9999;
+
+  .wrap1 {
+    @include navCenter(50%);
+  }
+
+  ul.nav.navbar-nav {
+    @include navCenter(-50%);
+  }
+
+  ul.nav.navbar-nav li {
+    float: left;
+
+    &.active > a {
+      background-color: $deepBlue;
+      color: #66acee;
+      outline: none;
+    }
+
+    a {
+      float: left;
+      color: $white;
+      letter-spacing: 3px;
+      font: {
+        family: 'Open Sans', sans-serif;
+        size: $navLinkSize;
+        weight: 700;
+      }
+      @include respond-to(500px) {
+        font-size: $navLinkSize - 3;
+        letter-spacing: 1px;
+      }
+      @include respond-to(350px) {
+        font-size: $navLinkSize - 5;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $deepBlue;
+        color: #66acee;
+        outline: none;
+      }
+    } //a
+  } //ul.nav.navbar-nav li
+
+} //.navbar.navbar-main
+
+/* Contact Button */
+.call {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 80px;
+    right: -15px;
+    cursor: pointer;
+    z-index: 100;
+    border: 3px solid $deepBlue;
+    border: {
+      top-left-radius: 5px;
+      right: none;
+      bottom: none;
+    }
+    animation: {
+      @include flickerSetting;
+    }
+    -webkit-animation: {
+      @include flickerSetting;
+    }
+    @include respond-to(992px) {
+      width: 65px;
+    }
+    @include respond-to(767px) {
+      width: 60px;
+    }
+  } //img
+
+  p {
+    position: absolute;
+    right: -15px;
+    background-color: $deepBlue;
+    color: $white;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+    animation: {
+      @include flickerSetting;
+    }
+    -webkit-animation: {
+      @include flickerSetting;
+    }
+    @include callButton(70px, 150px, 16px, 5px);
+
+    @include respond-to(992px) {
+      @include callButton(65px, 145px, 14px, 3px);
+    }
+    @include respond-to(767px) {
+      @include callButton(60px, 140px, 14px, 3px);
+    }
+  } //p
+} //.call
+
+@-webkit-keyframes flicker {
+  @include flickerAnim;
+}
+
+@keyframes flicker {
+  @include flickerAnim;
+}
+
+/* Contact Modal */
+#contact1.contact {
+  top: 25%;
+  z-index: 10000;
+
+  @include respond-to(767px) {
+    width: 60%;
+    @include center;
+  }
+  @include respond-to(500px) {
+    width: 75%;
+  }
+} //#contact1.contact
+
+.modal-header {
+  background-color: $regBlue;
+  color: $white;
+
+  p {
+    font: {
+      size: 18px;
+      weight: 700;
+    }
+  }
+
+  .modal-header button {
+    color: $white;
+  }
+} //modal-header
+
+.modal-body p {
+  color: #191919;
+  font-size: 16px;
+}
+
+section h2 {
+  @include sectionTitles;
+  @include respond-to(400px) {
+    font-size: 25px;
+    margin-left: 0;
+  }
+}
+
+.dmciLogo {
+  position: relative;
+
+  img {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include respond-to(668px) {
+      float: none;
+      position: relative;
+      display: block;
+      width: 200px;
+      @include center;
+    }
+  }//img
+} //.dmciLogo
+
+/***** Cities Section *****/
+.propSection {
+  @include sectionTitleStyle;
+
+  h2 {
+    @include sectionTitleSpace;
+    @include respond-to(400px) {
+      background-position: 0 5px;
+      background-size: 40px;
+    }
+  }
+
+  .row {
+    @include sectionSpace;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover h3 {
+      background-color: $deepBlue;
+    }
+
+    h3 {
+      background-color: $regBlue;
+      color: $white;
+      margin: 0 auto 25px;
+      padding: {
+        top: 7px;
+        bottom: 7px;
+      }
+      @include respond-to(550px) {
+        font-size: $propSecH3;
+      }
+      @include respond-to(450px) {
+        font-size: $propSecH3 - 3;
+      }
+      @include respond-to(400px) {
+        font-size: $propSecH3 - 5;
+      }
+      @include respond-to(350px) {
+        font-size: $propSecH3 - 6;
+      }
+    } //h3
+
+    img {
+      margin: 0 auto;
+    }
+  } //.propSection a
+} //.propSection
+
+/***** City Properties *****/
+.cityProp {
+  @include sectionTitleStyle;
+
+  h2 {
+    padding-left: 40px;
+    margin: 20px;
+
+    @include respond-to(767px) {
+      font-size: 26px;
+    }
+    @include respond-to(400px) {
+      background-size: 20px;
+      padding-left: 35px;
+      margin-left: 5px;
+    }
+  }// h2
+} //.cityProp
+
+.panel-group.accordion {
+  width: 90%;
+  margin: 25px auto;
+}
+
+.panel-heading a {
+  color: $white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+
+  h4 {
+    padding: 5px 10px;
+  }
+} //.panel-heading a
+
+.panel-heading.unCons {
+  background-color: rgba(8,170,87,0.7);
+}
+
+.panel-heading.readOc {
+  background-color: rgba(6,83,163,0.7);
+}
+.panel-collapse h5 {
+  @include seoKeyword;
+}
+
+.panel-body img {
+  display: inline;
+  margin: 20px 20px;
+}
+
+.propName {
+  display: inline-block;
+  border: 2px solid #18345c;
+  border-radius: 5px;
+  margin: 10px;
+
+  a p {
+    color: $deepBlue;
+
+    &.text-left {
+      float: left;
+      font-weight: 600;
+      margin: 5px 15px 25px 35px;
+      @include respond-to(600px) {
+        margin-left: 15px;
+      }
+    } //&.text-left
+
+    &:last-of-type {
+      @include respond-to(500px) {
+        font-size: 14px;
+      }
+    } //&:last-of-type
+  } // a p
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    outline: none;
+  }
+
+  img {
+    @include respond-to(767px) {
+      width: 90%;
+    }
+    @include respond-to(550px) {
+      width: 85%;
+    }
+  } //img
+
+  .infoBtn {
+    display: inline-block;
+    float: left;
+    background-color: $deepBlue;
+    color: $white;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 10px;
+    margin-left: 25px;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $regBlue;
+    }
+  } //.infoBtn
+} //.propName
+
+/* Buyer's Guide */
+.guideSection {
+  @include sectionTitleStyle;
+
+  h2 {
+    @include sectionTitleSpace;
+    @include respond-to(400px) {
+      background-size: 20px;
+    }
+  } ///h2
+
+  img.designImg {
+    @include sidePhoto;
+    @include respond-to(600px) {
+      display: none;
+    }
+  } //img.designImg
+
+  .info {
+    @include info;
+  } //.info
+
+  ol {
+    @include sectionSpace;
+
+    li p:first-child {
+      @include subSecTitleStyle;
+    }
+  }
+
+  .moreInfo {
+    padding-bottom: 20px;
+    @include sectionSpace;
+
+    img.designImg {
+      @include respond-to(668px) {
+        display: none;
+      }
+    } //img.designImg
+
+    #cashPayment,
+    #financing {
+      width: 90%;
+      margin: 20px auto 10px;
+    }
+  } //.moreInfo
+
+  .moreInfo a {
+    display: block;
+    color: $deepBlue;
+    margin-left: $moreInfoMarginL;
+    padding-left: 35px;
+    font: {
+      size: $guideSecFont + 2;
+      weight: 600;
+    }
+    text: {
+      align: left;
+      decoration: none;
+    }
+
+    @include respond-to(600px) {
+      font-size: $guideSecFont;
+      margin-left: $moreInfoMarginL - 10;
+    }
+    @include respond-to(500px) {
+      font-size: $guideSecFont - 2;
+      margin-left: $moreInfoMarginL - 15;
+    }
+    @include respond-to(450px) {
+      background-position: 10px 10px;
+      background-size: 12px;
+      margin-left: $moreInfoMarginL * 0;
+      padding-left: 30px;
+    }
+
+    &:focus,
+    &:visited,
+    &#financingBtn,
+    &#financingBtn:focus,
+    &#financingBtn:visited {
+      color: $deepBlue;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active,
+    &#financingBtn:hover,
+    &#financingBtn:active {
+      color: $deepBlue;
+      box-shadow: none;
+      text-decoration: underline;
+      outline: none;
+    }
+
+    p:last-child {
+      margin-bottom: 30px;
+    }
+  } //.moreInfo a
+
+  #financing p.client {
+    color: $deepBlue;
+    font: {
+      size: $guideSecFont;
+      weight: 700;
+    }
+  }
+} //.guideSection
+
+/* About */
+.dmciSection {
+  @include sectionTitleStyle;
+
+  h2 {
+    @include sectionTitleSpace;
+    @include respond-to(400px) {
+      background-size: 20px;
+    }
+  }
+
+  img.designImg {
+    @include sidePhoto;
+    @include respond-to(767px) {
+      display: none;
+    }
+  }
+
+  .info {
+    @include info;
+  } //.info
+
+  h3 {
+    @include subSecTitleStyle;
+  }
+} //.dmciSection
+
+/* Footer */
+footer {
+  background-color: #18345c;
+  color: #eff2f7;
+  height: auto;
+  padding-top: 10px;
+  margin: $footerMargin * 0;
+
+  .row {
+    margin-bottom: $footerMargin;
+
+    h2.invisible {
+      @include seoKeyword;
+    }
+
+    img {
+      margin: ($footerMargin * 2) auto ($footerMargin - 5);
+    }
+
+    p {
+      margin-left: $footerMargin * 4;
+      @include respond-to(992px) {
+        margin-left: $footerMargin * 0;
+      }
+      @include respond-to(767px) {
+        text-align: center;
+      }
+
+    } //p
+
+    ul {
+      list-style: none;
+
+      &.rightLoc {
+        margin-left: $footerMargin - 35;
+
+        @include respond-to(992px) {
+          margin-left: $footerMargin - 25;
+        }
+        @include respond-to(767px) {
+          margin-left: $footerMargin * 0;
+        }
+        @include respond-to(600px) {
+          margin-left: $footerMargin - 50;
+        }
+        @include respond-to(500px) {
+          margin-left: $footerMargin - 55;
+        }
+      } //&.rightLoc
+    } //ul
+
+    .last.row {
+      @include respond-to(992px) {
+        margin-left: $footerMargin - 50;
+      }
+      @include respond-to(767px) {
+        margin-left: $footerMargin + 55;
+      }
+      @include respond-to(500px) {
+        margin-left: $footerMargin + 35;
+      }
+      @include respond-to(450px) {
+        margin-left: $footerMargin + 10;
+      }
+      @include respond-to(400px) {
+        margin-left: $footerMargin * 0;
+      }
+      @include respond-to(350px) {
+        margin-left: $footerMargin - 45;
+      }
+    } //.last.row
+
+  } //.row
+
+  span:last-of-type {
+    @include respond-to(550px) {
+      display: block;
+    }
+  }
+
+  a,
+  a:visited,
+  span a:active,
+  span a:visited {
+    @include footerLink;
+  }
+
+  a:hover,
+  a:focus,
+  span a:hover,
+  span a:focus {
+    @include footerLink;
+    border-bottom: 1px solid;
+  }
+} //footer
+
+/***** Property Pages *****/
+#mainSection .propSection {
+  h3 {
+    margin-right: 20px;
+    background-color: $white;
+    color: #191919;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 10px 40px;
+  }
+  .condoMainImg {
+    padding: {
+      top: 35px;
+      bottom: 35px;
+    }
+  }
+} //#mainSection .propSection
+
+#unitsSection {
+  margin-top: $propPageSecMargin;
+  @include respond-to(1100px) {
+    margin-top: $propPageSecMargin + 30;
+  }
+  @include respond-to(767px) {
+    margin-top: $propPageSecMargin + 60;
+  }
+  @include respond-to(500px) {
+    margin-top: $propPageSecMargin + 80;
+  }
+
+  h3 {
+    /* background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg; */
+    margin: $subSecMargin;
+    @include sectionTitles;
+    @include sectionTitleSpace;
+    @include respond-to(400px) {
+      /* background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg; */
+      font-size: 25px;
+      margin-left: 0;
+    }
+  } //h3
+
+  #units p {
+    @include propPageImgDesc;
+  }
+
+  .propSection table {
+    width: $tableWidth;
+    margin: 30px auto;
+    border: $tableBorder;
+    @include respond-to(1100px) {
+      width: $tableWidth + 5;
+    }
+    @include respond-to(992px) {
+      width: $tableWidth + 15;
+    }
+    @include respond-to(767px) {
+      width: $tableWidth + 25;
+    }
+
+    th {
+      background-color: $regBlue;
+      color: $white;
+      border: $tableBorder;
+      text-align: center;
+      font-weight: 700;
+      @include tableHeightFont(50px, 20px);
+    }
+
+    td {
+      @include tableHeightFont(35px, 15px);
+      border: $tableBorder;
+    }
+  } //.propSection table
+} //#unitsSection
+
+#facilitiesSection {
+  margin-top: $propPageSecMargin;
+  @include respond-to(1100px) {
+    margin-top: $propPageSecMargin + 30;
+  }
+  @include respond-to(767px) {
+    margin-top: $propPageSecMargin + 60;
+  }
+  @include respond-to(500px) {
+    margin-top: $propPageSecMargin + 80;
+  }
+
+  h3 {
+    /* background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg; */
+    margin: $subSecMargin;
+    @include sectionTitles;
+    @include sectionTitleSpace;
+    @include respond-to(400px) {
+      /* background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg; */
+      font-size: $facilitySecFont;
+      margin-left: 0;
+    }
+  } //h3
+
+  .row h4 {
+    @include propPageImgDesc;
+  }
+
+  #grid img {
+    border: $tableBorder;
+    z-index: 10;
+    cursor: pointer;
+    @include center;
+
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  } //#grid img
+
+  #grid h4 {
+    @include respond-to(550px) {
+      font-size: $facilitySecFont - 10;
+    }
+  }
+
+  .otherFacility {
+    @include facilityPadding(50px);
+    @include respond-to(767px) {
+      @include facilityPadding(30px);
+    }
+    @include respond-to(668px) {
+      @include facilityPadding(20px);
+    }
+    @include respond-to(500px) {
+      @include facilityPadding(10px);
+    }
+
+    h5 {
+      color: $deepBlue;
+      margin-bottom: 15px;
+      text-decoration: underline;
+      font: {
+        size: $facilitySecFont - 7;
+        weight: 700;
+      }
+    }
+
+    ul {
+      list-style: none;
+      font-size: $facilitySecFont - 9;
+      text-indent: -20px;
+    }
+  }//.otherFacility
+} //#facilitiesSection
+
+#locationSection {
+  margin-top: $propPageSecMargin;
+  @include respond-to(1100px) {
+    margin-top: $propPageSecMargin + 30;
+  }
+  @include respond-to(767px) {
+    margin-top: $propPageSecMargin + 60;
+  }
+  @include respond-to(500px) {
+    margin-top: $propPageSecMargin + 80;
+  }
+
+  h3 {
+    /* background: url(../img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box; */
+    padding-left: 40px;
+    margin: $subSecMargin;
+    margin: 20px;
+    @include sectionTitles;
+    @include respond-to(400px) {
+      /* background: url(../img/icons/locationIcon.png) 10px 5px/20px $bgImg; */
+      padding-left: 35px;
+      margin-left: 5px;
+      font-size: 25px;
+      margin-left: 0;
+    }
+  }
+
+  #map {
+    margin: 30px auto;
+  }
+
+} //#locationSection
+
+/* Image Zoom */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $overlayWidth;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 100;
+}
+
+#overlayContent {
+  position: fixed;
+  width: $overlayWidth;
+  top: 100px;
+  left: 0;
+  text-align: center;
+  display: none;
+  overflow: hidden;
+  z-index: 100;
+
+  img {
+    width: $overlayWidth - 45;
+    @include respond-to(1100px) {
+      width: $overlayWidth - 25;
+    }
+    @include respond-to(767px) {
+      width: $overlayWidth - 15;
+    }
+    @include respond-to(600px) {
+      width: $overlayWidth - 10;
+    }
+    @include respond-to(500px) {
+      width: $overlayWidth - 5;
+    }
+  } //img
+} //#overlayContent
+
+#imgBig {
+  border: 5px solid $deepBlue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.properties img, hr {
+  padding: 0;
+  margin: 0;
+}
