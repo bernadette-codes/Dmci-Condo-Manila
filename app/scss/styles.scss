@@ -97,20 +97,16 @@ body {
   opacity: 1;
 }
 
-/** Scrollspy **/
-nav.affix {
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-}
-
 /** Nav Bar **/
-.affix ~ .container-fluid {
+nav#navMain ~ .container-fluid {
   position: relative;
   top: 50px;
 }
 
 .navbar.navbar-main {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: $deepBlue;
   margin: 0;
   border: none;
@@ -152,7 +148,8 @@ nav.affix {
       }
 
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         background-color: $deepBlue;
         color: #66acee;
         outline: none;
@@ -288,6 +285,10 @@ section h2 {
 } //.dmciLogo
 
 /***** Cities Section *****/
+#propertiesSection {
+  margin-top: 50px;
+}
+
 .propSection {
   @include sectionTitleStyle;
 
