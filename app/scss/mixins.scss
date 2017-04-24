@@ -1,0 +1,120 @@
+@mixin flickerSetting {
+  name: flicker;
+  iteration-count: infinite;
+  duration: 1s;
+}
+
+@mixin flickerAnim {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0.3;}
+}
+
+@mixin sectionTitles {
+  background-color: $white;
+  color: $deepBlue;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+@mixin sectionTitleStyle {
+  background-color: $white;
+  margin: 5%;
+  padding: 10px;
+}
+
+@mixin sectionTitleSpace {
+  padding: 10px 0 0 40px;
+  margin: 20px;
+}
+
+@mixin sectionSpace {
+  width: 95%;
+  margin: 35px auto 10px;
+}
+
+@mixin subSecTitleStyle {
+  color: $deepBlue;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@mixin sidePhoto {
+  float: right;
+  clear: both;
+  width: 30%;
+  margin: 40px 20px 20px 25px;
+}
+
+@mixin propPageImgDesc {
+  background-color: $deepBlue;
+  color: $white;
+  margin: 0 auto 25px;
+  padding: {
+    top: 7px;
+    bottom: 7px;
+  }
+}
+
+@mixin footerLink {
+  color: $white;
+  text-decoration: none;
+  outline: none;
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin seoKeyword {
+  position: absolute;
+  text-indent: -3000px;
+}
+
+@mixin info {
+      width: 90%;
+      margin: 20px auto 10px;
+
+      h3 {
+          padding-top: 20px;
+          @include subSecTitleStyle;
+      }
+
+      p {
+          font-size: $guideSecFont;
+          margin-left: 20px;
+      }
+
+      &:last-of-type {
+          padding-bottom: 20px;
+      }
+}
+
+@mixin facilityPadding($n) {
+  padding: 0 $n 30px;
+}
+
+@mixin navCenter($n) {
+  position: relative;
+  float: left;
+  left: $n
+}
+
+@mixin callButton($w, $t, $fs, $pad) {
+  width: $w;
+  top: $t;
+  font-size: $fs;
+  padding: $pad;
+}
+
+@mixin tableHeightFont($h, $f) {
+  height: $h;
+  font-size: $f;
+  vertical-align: middle;
+}
+
+@mixin respond-to($val){
+  @media screen and (max-width: $val){
+    @content
+  }
+}
