@@ -3,9 +3,10 @@ var React = require('react'),
     Router = ReactRouter.BrowserRouter,
     Route = ReactRouter.Route,
     Switch = ReactRouter.Switch,
+    // Modules
     NavBar = require('./nav'),
-    Landing = require('./landing'),
     ContactModal = require('./contactModal'),
+    Landing = require('./landing'),
     CitySection = require('./citySection'),
     GuideSection = require('./guideSection'),
     AboutSection = require('./aboutSection');
