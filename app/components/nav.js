@@ -1,19 +1,19 @@
-var React = require('react');
+var React = require('react'),
+    NavLink = require('react-router-dom').NavLink;
 
-class NavBar extends React.Component {
-    render() {
-        return (
-            <nav className="container-fluid navbar navbar-main" data-spy="affix" id="navMain">
-                <div className="wrap1">
-                    <ul className="nav navbar-nav">
-                        <li><a href="#propertiesSection">PROPERTIES</a></li>
-                        <li><a href="#buyersGuideSection">BUYERS GUIDE</a></li>
-                        <li><a href="#aboutSection">ABOUT</a></li>
-                    </ul>
-                </div>
-            </nav>
-        )
-    }
+function NavBar () {
+    return (
+    <nav className="container-fluid navbar navbar-main" id="navMain">
+        <div className="wrap1">
+            <ul className="nav navbar-nav">
+                <li style={{ display: "none" }}><NavLink exact activeClassName='active' to='/'>Home</NavLink></li>
+                <li><NavLink activeClassName='active' to='/Properties'>PROPERTIES</NavLink></li>
+                <li><NavLink activeClassName='active' to='/Buyersguide'>BUYERS GUIDE</NavLink></li>
+                <li><NavLink activeClassName='active' to='/About'>ABOUT</NavLink></li>
+            </ul>
+        </div>
+    </nav>
+    )
 }
 
 module.exports = NavBar;
