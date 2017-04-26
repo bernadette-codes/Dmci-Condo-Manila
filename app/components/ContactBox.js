@@ -1,4 +1,4 @@
-var React = require('react');
+const React = require('react');
 
 class ContactBox extends React.Component {
     render() {
