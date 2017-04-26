@@ -1,9 +1,10 @@
-var React = require('react'),
-    ContactBox = require('./contactBox');
+const React = require('react'),
+    ContactBox = require('./ContactBox'),
+    DMCILogo = require('./DmciLogo');
 
 class CityProp extends React.Component {
     render() {
-        var cities = [
+        const cities = [
             {
                 "cityName": "Las Piñas",
                 "id": "lasPinasSection",
@@ -311,9 +312,7 @@ class CityProp extends React.Component {
                             <ContactBox />
 
                             <div className="cityProp">
-                                <div className="dmciLogo">
-                                    <img src="app/img/dmci-logo1.jpg" alt="DMCI Logo" className="img-responsive" />
-                                </div>
+                                <DMCILogo />
 
                                 <h2 className="text-left" style={{ background: "url('app/img/icons/locationIcon.png') 10px 5px/25px no-repeat padding-box" }}>{city.cityName} Condo</h2>
                                 <hr />
