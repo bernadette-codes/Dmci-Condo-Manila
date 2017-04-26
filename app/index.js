@@ -1,6 +1,6 @@
-var React = require('react'),
+const React = require('react'),
     ReactDOM = require('react-dom'),
-    Main = require('./components/main');
+    Main = require('./components/Main');
 require('./css/styles.css');
 
 
