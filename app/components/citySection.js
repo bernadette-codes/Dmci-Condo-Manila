@@ -1,11 +1,12 @@
-var React = require('react'),
-    CityProp = require('./cityProp'),
-    ContactBox = require('./contactBox');
+const React = require('react'),
+    CityProp = require('./CityProp'),
+    ContactBox = require('./ContactBox'),
+    DMCILogo = require('./DmciLogo'),
+    Footer = require('./Footer');
 
 class CitySection extends React.Component {
     render() {
-        var section = ['PROPERTIES', 'BUYERS GUIDE', 'About DMCI'],
-            cities = [
+        const cities = [
                 {
                     "cityName": "Las Piñas",
                     "id": "lasPinasSection",
@@ -311,11 +312,9 @@ class CitySection extends React.Component {
                     <ContactBox />
 
                     <div className="propSection">
-                        <div className="dmciLogo">
-                            <img src="app/img/dmci-logo1.jpg" alt="DMCI Logo" className="img-responsive" />
-                        </div>
+                        <DMCILogo />
 
-                        <h2 className="text-left" style={{ background: "url('app/img/icons/condoLogo.png') 0 3px/50px no-repeat padding-box" }}>{section[0]}</h2>
+                        <h2 className="text-left" style={{ background: "url('app/img/icons/condoLogo.png') 0 3px/50px no-repeat padding-box" }}>PROPERTIES</h2>
                         <hr />
 
                         <div className="row text-center mainPage">
@@ -335,6 +334,8 @@ class CitySection extends React.Component {
                 </section>
 
                 <CityProp />
+
+                <Footer />
             </div>
             )
     }
