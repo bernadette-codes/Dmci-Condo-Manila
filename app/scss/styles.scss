@@ -74,14 +74,14 @@ body {
 } //#first-slider
 
 .carousel-inner .item .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-fade .carousel-inner .item {
@@ -96,6 +96,7 @@ body {
 .carousel-fade .carousel-inner .active {
   opacity: 1;
 }
+
 
 /** Nav Bar **/
 nav#navMain ~ .container-fluid {
@@ -683,7 +684,6 @@ footer {
 /***** Property Pages *****/
 #mainSection .propSection {
   h3 {
-    margin-right: 20px;
     background-color: $white;
     color: #191919;
     font-size: 18px;
@@ -711,12 +711,11 @@ footer {
   }
 
   h3 {
-    /* background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg; */
-    margin: $subSecMargin;
     @include sectionTitles;
     @include sectionTitleSpace;
     @include respond-to(400px) {
-      /* background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg; */
+      background-position: 0 5px;
+      background-size: 40px;
       font-size: 25px;
       margin-left: 0;
     }
@@ -769,12 +768,11 @@ footer {
   }
 
   h3 {
-    /* background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg; */
-    margin: $subSecMargin;
     @include sectionTitles;
     @include sectionTitleSpace;
     @include respond-to(400px) {
-      /* background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg; */
+      background-position: 0 5px;
+      background-size: 40px;
       font-size: $facilitySecFont;
       margin-left: 0;
     }
@@ -845,15 +843,12 @@ footer {
   }
 
   h3 {
-    /* background: url(../img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box; */
     padding-left: 40px;
-    margin: $subSecMargin;
     margin: 20px;
     @include sectionTitles;
     @include respond-to(400px) {
-      /* background: url(../img/icons/locationIcon.png) 10px 5px/20px $bgImg; */
+      background-size: 20px;
       padding-left: 35px;
-      margin-left: 5px;
       font-size: 25px;
       margin-left: 0;
     }
