@@ -1,10 +1,5 @@
-// Copyright Year
-var d = new Date(),
-    n = d.getFullYear();
-document.getElementById("year").innerHTML = n;
-
 $(document).ready(function(){
-    var windowWidth = $(window).width(),
+    const windowWidth = $(window).width(),
         windowHeight = $(window).height(),
         $landingTop = $("header#first-slider");
         $landing = $("#first-slider .carousel .item"),
@@ -14,7 +9,7 @@ $(document).ready(function(){
         $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']"),
         //Property City Names Width
         $propLocation = $('.propSection .mainPage h3'),
-        $propImg = $('.propSection .row img').width(),
+        $propImg = $('.propSection .mainPage img').width(),
         //Condo Main Photo Width
         $condoMainImg = $('.condoMainImg'),
         $propWidth = $('.propSection').width(),
@@ -32,10 +27,10 @@ $(document).ready(function(){
 
     //Page on Resize
     $(window).on("resize", function() {
-        var windowWidth = $(window).width(),
+        const windowWidth = $(window).width(),
             windowHeight = $(window).height(),
             //Property City Names Width
-            $propImg = $('.propSection .row img').width(),
+            $propImg = $('.propSection .mainPage img').width(),
             //Condo Main Photo Width
             $propWidth = $('.propSection').width(),
             //Facilities Photo Name Width
