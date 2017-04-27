@@ -1,5 +1,7 @@
 const React = require('react'),
-    ContactBox = require('./ContactBox'),
+    Link = require('react-router-dom').Link,
+    // Modules
+    ContactBox = require('./Contact/ContactBox'),
     DMCILogo = require('./DmciLogo');
 
 class CityProp extends React.Component {
@@ -334,13 +336,13 @@ class CityProp extends React.Component {
                                                                 <div key={condoLoc.propName} >
                                                                     <h5>{condoLoc.propName}</h5>
                                                                     <div className="propName">
-                                                                        <a target="_blank" href={condoLoc.link}>
+                                                                        <Link to='/Condos'>
                                                                             <img src={condoLoc.namePhoto} alt={condoLoc.propName} className="img-responsive" />
                                                                             <img src={condoLoc.mapPhoto} alt={condoLoc.propName} className="img-responsive" />
                                                                             <br />
                                                                             <p className="infoBtn">More Info</p>
                                                                             <p className="text-left">Location:&nbsp; {condoLoc.address}</p>
-                                                                        </a>
+                                                                        </Link>
                                                                     </div>
                                                                 </div>
                                                             );
