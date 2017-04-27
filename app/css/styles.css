@@ -585,8 +585,13 @@ footer {
   margin: 0 0 10px 40px; }
 
 #mainSection .propSection .condoMainImg {
-  padding-top: 35px;
-  padding-bottom: 35px; }
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  #mainSection .propSection .condoMainImg img {
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px; }
 
 #unitsSection {
   margin-top: -90px; }
