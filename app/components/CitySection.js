@@ -1,11 +1,14 @@
 const React = require('react'),
+    // Modules
     CityProp = require('./CityProp'),
-    ContactBox = require('./ContactBox'),
+    ContactBox = require('./Contact/ContactBox'),
     DMCILogo = require('./DmciLogo'),
-    Footer = require('./Footer');
+    Footer = require('./Menu/Footer');
 
 class CitySection extends React.Component {
     render() {
+        window.scrollTo(0, 0);
+
         const cities = [
                 {
                     "cityName": "Las Piñas",
