@@ -1,10 +1,13 @@
 const React = require('react'),
-    ContactBox = require('./ContactBox'),
+    // Modules
+    ContactBox = require('./Contact/ContactBox'),
     DMCILogo = require('./DmciLogo'),
-    Footer = require('./Footer');
+    Footer = require('./Menu/Footer');
 
 class AboutSection extends React.Component {
     render() {
+        window.scrollTo(0, 0);
+
         const features = [
             {
                 "feature": "QUALITY",
