@@ -25,5 +25,3 @@ class ContactModal extends React.Component {
 }
 
 module.exports = ContactModal;
-
-
