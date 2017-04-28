@@ -1,15 +1,15 @@
-var React = require('react'),
+const React = require('react'),
     ReactRouter = require('react-router-dom'),
     Router = ReactRouter.BrowserRouter,
     Route = ReactRouter.Route,
     Switch = ReactRouter.Switch,
     // Modules
-    NavBar = require('./nav'),
-    ContactModal = require('./contactModal'),
-    Landing = require('./landing'),
-    CitySection = require('./citySection'),
-    GuideSection = require('./guideSection'),
-    AboutSection = require('./aboutSection');
+    NavBar = require('./Menu/Nav'),
+    ContactModal = require('./Contact/ContactModal'),
+    Landing = require('./Landing'),
+    CitySection = require('./CitySection'),
+    GuideSection = require('./GuideSection'),
+    AboutSection = require('./AboutSection');
 
 class Main extends React.Component {
     render() {
