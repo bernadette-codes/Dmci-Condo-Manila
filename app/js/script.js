@@ -7,9 +7,6 @@ $(document).ready(function(){
         //Variables on page load
         $myCarousel = $('#carousel-generic'),
         $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']"),
-        //Property City Names Width
-        $propLocation = $('.propSection .mainPage h3'),
-        $propImg = $('.propSection .mainPage img').width(),
         //Condo Main Photo Width
         $condoMainImg = $('.condoMainImg'),
         $propWidth = $('.propSection').width(),
@@ -29,8 +26,6 @@ $(document).ready(function(){
     $(window).on("resize", function() {
         const windowWidth = $(window).width(),
             windowHeight = $(window).height(),
-            //Property City Names Width
-            $propImg = $('.propSection .mainPage img').width(),
             //Condo Main Photo Width
             $propWidth = $('.propSection').width(),
             //Facilities Photo Name Width
@@ -40,8 +35,6 @@ $(document).ready(function(){
 
         $landing.css({"height": windowHeight-49, "width": windowWidth});
         $landingTop.css("margin-top", $navBarHeight);
-        //Property City Names Width
-        $propLocation.css("width", $propImg);
         //Condo Main Photo Width
         $condoMainImg.css("width", $propWidth-70);
         //Facilities Photo Name Width
@@ -81,9 +74,6 @@ $(document).ready(function(){
     });
     $('#carousel-generic').carousel({interval: 0});
     // End of Landing Page Slides backgrounds
-
-    //Property City Names Width
-    $propLocation.css("width", $propImg);
 
     //Condo Main Photo Width
     $condoMainImg.css("width", $propWidth-70);
