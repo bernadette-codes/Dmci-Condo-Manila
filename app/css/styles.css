@@ -6,6 +6,10 @@ body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8; }
 
+h1#seo {
+  position: absolute;
+  text-indent: -3000px; }
+
 /** Landing Page Slides backgrounds **/
 #first-slider .slide1,
 #first-slider .slide2 {
@@ -27,9 +31,6 @@ body {
 #first-slider {
   font-family: 'Quicksand', sans-serif;
   font-weight: 700; }
-  #first-slider h1 {
-    position: absolute;
-    text-indent: -3000px; }
   #first-slider p {
     font-size: 40px;
     font-weight: 600;
@@ -127,6 +128,12 @@ nav#navMain ~ .container-fluid {
         background-color: #01216C;
         color: #66acee;
         outline: none; }
+
+#propertiesSection,
+#buyersGuideSection,
+#aboutSection,
+#mainSection {
+  margin-top: 50px; }
 
 /* Contact Button */
 .call {
@@ -227,7 +234,8 @@ section h2 {
   background-color: #ffffff;
   color: #01216C;
   font-size: 30px;
-  margin-left: 10px; }
+  padding: 10px 0 0 50px;
+  margin: 20px; }
   @media screen and (max-width: 400px) {
     section h2 {
       font-size: 25px;
@@ -250,15 +258,12 @@ section h2 {
         margin-right: auto; } }
 
 /***** Cities Section *****/
-#propertiesSection {
-  margin-top: 50px; }
-
 .propSection {
   background-color: #ffffff;
   margin: 5%;
   padding: 10px; }
   .propSection h2 {
-    padding: 10px 0 0 40px;
+    padding: 10px 0 0 50px;
     margin: 20px; }
     @media screen and (max-width: 400px) {
       .propSection h2 {
@@ -291,6 +296,10 @@ section h2 {
           font-size: 12px; } }
     .propSection a img {
       margin: 0 auto; }
+
+.mainPage img {
+  display: block;
+  width: 100%; }
 
 /***** City Properties *****/
 .cityProp {
@@ -382,7 +391,7 @@ section h2 {
   margin: 5%;
   padding: 10px; }
   .guideSection h2 {
-    padding: 10px 0 0 40px;
+    padding: 10px 0 0 50px;
     margin: 20px; }
     @media screen and (max-width: 400px) {
       .guideSection h2 {
@@ -470,7 +479,7 @@ section h2 {
   margin: 5%;
   padding: 10px; }
   .dmciSection h2 {
-    padding: 10px 0 0 40px;
+    padding: 10px 0 0 50px;
     margin: 20px; }
     @media screen and (max-width: 400px) {
       .dmciSection h2 {
@@ -577,17 +586,43 @@ footer {
     border-bottom: 1px solid; }
 
 /***** Property Pages *****/
-#mainSection .propSection h3 {
+#mainSection .propSection h1 {
+  background-color: #ffffff;
+  color: #01216C;
+  font-size: 30px;
+  padding: 10px 0 0 50px;
+  margin: 20px; }
+  @media screen and (max-width: 400px) {
+    #mainSection .propSection h1 {
+      background-position: 0 5px;
+      background-size: 40px;
+      font-size: 25px;
+      margin-left: 0; } }
+
+#mainSection .propSection h2 {
   background-color: #ffffff;
   color: #191919;
   font-size: 18px;
   line-height: 26px;
-  margin: 0 0 10px 40px; }
+  margin: 0 0 10px 0;
+  padding-top: 7px;
+  padding-bottom: 7px; }
+  @media screen and (max-width: 550px) {
+    #mainSection .propSection h2 {
+      font-size: 18px; } }
+  @media screen and (max-width: 450px) {
+    #mainSection .propSection h2 {
+      font-size: 15px; } }
+  @media screen and (max-width: 400px) {
+    #mainSection .propSection h2 {
+      font-size: 13px; } }
+  @media screen and (max-width: 350px) {
+    #mainSection .propSection h2 {
+      font-size: 12px; } }
 
 #mainSection .propSection .condoMainImg {
   display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 30px auto; }
   #mainSection .propSection .condoMainImg img {
     width: 100%;
     padding-top: 35px;
@@ -608,8 +643,7 @@ footer {
     background-color: #ffffff;
     color: #01216C;
     font-size: 30px;
-    margin-left: 10px;
-    padding: 10px 0 0 40px;
+    padding: 10px 0 0 50px;
     margin: 20px; }
     @media screen and (max-width: 400px) {
       #unitsSection h3 {
@@ -617,6 +651,9 @@ footer {
         background-size: 40px;
         font-size: 25px;
         margin-left: 0; } }
+  #unitsSection #units img {
+    display: block;
+    width: 100%; }
   #unitsSection #units p {
     background-color: #01216C;
     color: #ffffff;
@@ -666,8 +703,7 @@ footer {
     background-color: #ffffff;
     color: #01216C;
     font-size: 30px;
-    margin-left: 10px;
-    padding: 10px 0 0 40px;
+    padding: 10px 0 0 50px;
     margin: 20px; }
     @media screen and (max-width: 400px) {
       #facilitiesSection h3 {
@@ -731,8 +767,7 @@ footer {
     margin: 20px;
     background-color: #ffffff;
     color: #01216C;
-    font-size: 30px;
-    margin-left: 10px; }
+    font-size: 30px; }
     @media screen and (max-width: 400px) {
       #locationSection h3 {
         background-size: 20px;
