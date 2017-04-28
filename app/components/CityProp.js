@@ -12,8 +12,7 @@ class CityProp extends React.Component {
                 "photo": "app/img/locations/lasPinas.jpg",
                 "link": "#lasPinasSection",
                 "lists": [{
-                    "properties": [],
-                    "show": false
+                    "properties": []
                 }, {
                     "title": "Ready for Occupancy",
                     "properties": [{
@@ -24,8 +23,7 @@ class CityProp extends React.Component {
                         "address": "Casimiro Avenue, Las Piñas"
                     }],
                     "collapse": "collapseLasPinas",
-                    "color": "readOc",
-                    "show": true
+                    "color": "readOc"
                 }]
             },
             {
@@ -43,11 +41,9 @@ class CityProp extends React.Component {
                         "address": "Guadalupe Viejo, Makati City"
                     }],
                     "collapse": "collapseMakati",
-                    "color": "unCons",
-                    "show": true
+                    "color": "unCons"
                 }, {
-                    "properties": [],
-                    "show": false
+                    "properties": []
                 }]
             },
             {
@@ -57,8 +53,7 @@ class CityProp extends React.Component {
                 "link": "#mandaluyongSection",
                 "lists": [
                     {
-                        "properties": [],
-                        "show": false
+                        "properties": []
                     },
                     {
                         "title": "Ready for Occupancy",
@@ -82,8 +77,7 @@ class CityProp extends React.Component {
                             "address": "Coronoado Street, Brgy. Hulo, Mandaluyong City"
                         }],
                         "collapse": "collapseMandaluyong",
-                        "color": "readOc",
-                        "show": true
+                        "color": "readOc"
                     }]
             },
             {
@@ -92,8 +86,7 @@ class CityProp extends React.Component {
                 "photo": "app/img/locations/muntinlupa.jpg",
                 "link": "#muntinlupaSection",
                 "lists": [{
-                    "properties": [],
-                    "show": false
+                    "properties": []
                 }, {
                     "title": "Ready for Occupancy",
                     "properties": [{
@@ -104,8 +97,7 @@ class CityProp extends React.Component {
                         "address": "East Service Road, Barrio Cupang, Muntinlupa City"
                     }],
                     "collapse": "collapseMuntinlupa",
-                    "color": "readOc",
-                    "show": true
+                    "color": "readOc"
                 }]
             },
             {
@@ -129,8 +121,7 @@ class CityProp extends React.Component {
                         "address": "Jackson Ave. Asiaworld City, Brgy. Don Galo, Parañaque City"
                     }],
                     "collapse": "collapse1Paranaque",
-                    "color": "unCons",
-                    "show": true
+                    "color": "unCons"
                 }, {
                     "title": "Ready for Occupancy",
                     "properties": [{
@@ -159,8 +150,7 @@ class CityProp extends React.Component {
                         "address": "West Service Road, Sun Valley, Bicutan, Parañaque City"
                     }],
                     "collapse": "collapse2Paranaque",
-                    "color": "readOc",
-                    "show": true
+                    "color": "readOc"
                 }]
             },
             {
@@ -178,8 +168,7 @@ class CityProp extends React.Component {
                         "address": "Villamor Airbase, Pasay City"
                     }],
                     "collapse": "collapse1Pasay",
-                    "color": "unCons",
-                    "show": true
+                    "color": "unCons"
                 }, {
                     "title": "Ready for Occupancy",
                     "properties": [{
@@ -190,8 +179,7 @@ class CityProp extends React.Component {
                         "address": "Taft Avenue, Pasay City"
                     }],
                     "collapse": "collapse2Pasay",
-                    "color": "readOc",
-                    "show": true
+                    "color": "readOc"
                 }]
             },
             {
@@ -233,8 +221,7 @@ class CityProp extends React.Component {
                         "address": "Sheridan St., Pasig City"
                     }],
                     "collapse": "collapse1Pasig",
-                    "color": "unCons",
-                    "show": true
+                    "color": "unCons"
                 }, {
                     "title": "Ready for Occupancy",
                     "properties": [{
@@ -251,8 +238,7 @@ class CityProp extends React.Component {
                         "address": "Jenny's Ave., Pasig City"
                     }],
                     "collapse": "collapse2Pasig",
-                    "color": "readOc",
-                    "show": true
+                    "color": "readOc"
                 }]
             },
             {
@@ -282,8 +268,7 @@ class CityProp extends React.Component {
                         "address": "Acacia Estates, Taguig City"
                     }],
                     "collapse": "collapse1Taguig",
-                    "color": "unCons",
-                    "show": true
+                    "color": "unCons"
                 }, {
                     "title": "Ready for Occupancy",
                     "properties": [{
@@ -306,8 +291,7 @@ class CityProp extends React.Component {
                         "address": "Acacia Estates, Taguig City"
                     }],
                     "collapse": "collapse2Taguig",
-                    "color": "readOc",
-                    "show": true
+                    "color": "readOc"
                 }]
             }];
 
