@@ -1,7 +1,7 @@
 const React = require('react'),
     ReactDOM = require('react-dom'),
     Main = require('./components/Main');
-require('./css/styles.css');
+require('./scss/styles.scss');
 
 
 ReactDOM.render(
