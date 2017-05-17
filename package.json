@@ -4,7 +4,8 @@
   "description": "Real Estate Website",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "set NODE_ENV=production && webpack -p",
+    "build:dev": "webpack-dev-server --open"
   },
   "babel": {
     "presets": [
