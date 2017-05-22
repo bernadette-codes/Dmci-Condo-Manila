@@ -13,7 +13,6 @@
 
 **Front-End:**
 
- - Webpack
  - ReactJS
  - JavaScript
  - jQuery 
