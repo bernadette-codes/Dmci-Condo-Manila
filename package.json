@@ -18,7 +18,7 @@
     "Manila",
     "Condo"
   ],
-  "author": "Bernadette Engleman",
+  "author": "Bernadette Estacio",
   "license": "ISC",
   "dependencies": {
     "cross-env": "^4.0.0",
